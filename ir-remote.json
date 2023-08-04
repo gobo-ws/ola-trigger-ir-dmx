@@ -1,0 +1,95 @@
+[
+    {
+        "id": "54f1c391.4eaf7c",
+        "type": "tab",
+        "label": "DMX to IR Remote",
+        "disabled": false,
+        "info": "Copyright (C) 2023 Johan Nilsson\nhttps://gobo.ws"
+    },
+    {
+        "id": "d3d0b5ed.6f9c18",
+        "type": "template",
+        "z": "54f1c391.4eaf7c",
+        "name": "Request code",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{req.query.code}}",
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "1a2c7638.352f7a",
+                "ab6d3ac5.77ce88"
+            ]
+        ]
+    },
+    {
+        "id": "1a2c7638.352f7a",
+        "type": "http response",
+        "z": "54f1c391.4eaf7c",
+        "name": "",
+        "x": 490,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ab6d3ac5.77ce88",
+        "type": "function",
+        "z": "54f1c391.4eaf7c",
+        "name": "Send code to RM3/4",
+        "func": "msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "821d4001.d7b"
+            ]
+        ]
+    },
+    {
+        "id": "29dcdd32.11b5b2",
+        "type": "http in",
+        "z": "54f1c391.4eaf7c",
+        "name": "",
+        "url": "ir-remote",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "d3d0b5ed.6f9c18"
+            ]
+        ]
+    },
+    {
+        "id": "821d4001.d7b",
+        "type": "simple-rm3",
+        "z": "54f1c391.4eaf7c",
+        "name": "RM3/4",
+        "ipaddress": "192.168.1.1",
+        "x": 830,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf036487e8764793",
+        "type": "comment",
+        "z": "54f1c391.4eaf7c",
+        "name": "Edit the hostname/IP address to your Broadlink device",
+        "info": "",
+        "x": 840,
+        "y": 160,
+        "wires": []
+    }
+]
