@@ -17,6 +17,11 @@ Contact me for support if you wish to use [LIRC](https://www.lirc.org/) or [PiIR
 Install it from the terminal in your .node-red directory using the following command:  
 `npm install --no-audit --no-update-notifier --no-fund --save --save-prefix=~ --omit=dev --engine-strict node-red-contrib-simple-broadlink@0.0.8`  
 
+**Available config files:** 
+
+* [Uyuni Lighting LED candles](uyuni/uyuni.conf)
+* More is coming soon...  
+
 **Installation**
 
 * Setup your Broadlink RM 3/4 Mini with the official app and connect it to your local network
