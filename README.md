@@ -39,4 +39,6 @@ The config file is provided on the command line:
 
 **DMX protocol** 
 
-Check the actual config file for the DMX Protocol.
+Check the actual config file for the DMX Protocol.  
+
+![Uyuni LED candles and Broadlink RM3 Mini](https://raw.githubusercontent.com/gobo-ws/ola-trigger-ir-dmx/main/images/uyuni.webp)
