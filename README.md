@@ -20,7 +20,7 @@ Install it from the terminal in your .node-red directory using the following com
 **Available config files:** 
 
 * [Uyuni Lighting LED candles](uyuni/uyuni.conf)
-* More is coming soon...  
+* More will come if requested
 
 **Installation**
 
